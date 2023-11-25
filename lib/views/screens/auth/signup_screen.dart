@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tiktok_clone/constant/colors.dart';
+import 'package:tiktok_clone/constant/controller.dart';
 import 'package:tiktok_clone/views/widgets/text_input_field.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -90,7 +92,12 @@ class SignupScreen extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  print("clicked");
+                  // authController.registerUser(
+                  //   _emailController.text,
+                  //   _passwordController.text,
+                  //   _usernameController.text,
+                  //   image,
+                  // );
                 },
                 child: Container(
                   width: width * 0.9,
