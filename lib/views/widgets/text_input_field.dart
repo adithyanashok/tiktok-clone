@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constant/colors.dart';
 
@@ -17,8 +19,12 @@ class TextInputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log(controller.text);
     return TextField(
       controller: controller,
+      style: const TextStyle(
+        color: Colors.white,
+      ),
       decoration: InputDecoration(
         labelText: labelText,
         prefixIcon: Icon(icon),

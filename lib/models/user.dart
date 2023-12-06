@@ -7,12 +7,14 @@ class UserModel {
   String password;
   String profilePic;
   String uid;
+  String fcmToken;
   UserModel({
     required this.username,
     required this.email,
     required this.password,
     required this.profilePic,
     required this.uid,
+    required this.fcmToken,
   });
   Map<String, dynamic> toJson() => {
         "username": username,
@@ -20,6 +22,7 @@ class UserModel {
         "password": password,
         "profilePic": profilePic,
         "uid": uid,
+        "fcmToken": fcmToken,
       };
 
   static UserModel fromSnap(DocumentSnapshot doc) {
@@ -30,6 +33,7 @@ class UserModel {
       password: snapshot['password'],
       profilePic: snapshot['profilePic'],
       uid: snapshot['uid'],
+      fcmToken: snapshot['fcmToken'],
     );
   }
 }
